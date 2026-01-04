@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Carta de Navidad para Mama</title>
+<style>
+/* Fondo navideño con gradiente y estrellas */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top left, #ff9a9e, #fad0c4);
+  color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Efecto de nieve */
+@keyframes snow {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+.snowflake {
+  position: absolute;
+  top: -10px;
+  font-size: 1rem;
+  color: white;
+  user-select: none;
+  pointer-events: none;
+  animation: snow linear infinite;
+}
+
+/* Contenedor de la carta */
+.container {
+  width: 90%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 36px 48px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Encabezado */
+h1 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2.5rem;
+  color: #d62828;
+  margin-top: 0;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Texto de la carta */
+.text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  animation: fadeIn 3s ease-in-out, float 6s ease-in-out infinite;
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Detalles navideños en emojis */
+.emoji {
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+</style>
+</head>
+<body>
+
+<!-- Nieve animada -->
+<script>
+for(let i=0;i<50;i++){
+  let snow = document.createElement('div');
+  snow.className = 'snowflake';
+  snow.style.left = Math.random()*100+'vw';
+  snow.style.fontSize = (Math.random()*12 + 12)+'px';
+  snow.style.animationDuration = (Math.random()*10+5)+'s';
+  snow.textContent = '❄';
+  document.body.appendChild(snow);
+}
+</script>
+
+<div class="container">
+  <h1>🎄 Carta para Mama 🎄</h1>
+  <div class="text">
+    Querida mama:<br><br>
+    En esta Navidad quiero regalarte algo que no cabe en ninguna caja y que no pense que haria pero lo mereces.<br><br>
+    Quiero decirte, antes que nada, cuánto te quiero. Eres una de las personas más importantes de mi vida, y cada día me doy cuenta de cuánto has hecho —y sigues haciendo— por mí. Gracias por tu cariño, tu paciencia y por estar siempre, tanto en los momentos fáciles como en los más difíciles.<br><br>
+    También quiero pedirte perdón por las veces en que no supe comportarme, cuando te hablé mal o no valoré todo lo que haces. A veces me equivoco, pero nunca dejo de quererte ni de admirarte.<br><br>
+    Gracias por sostenerme cuando caigo, por escucharme cuando nadie más lo hace y por enseñarme, con tu ejemplo, a seguir adelante. Sé que pase lo que pase, siempre podré contar contigo, y yo también quiero que sepas que siempre podrás contar conmigo.<br><br>
+    Eres la mejor madre del mundo, y me siento afortunado de tenerte. Ojalá esta Navidad esté llena de paz, amor y muchos momentos felices juntos.<br><br>
+    Con todo mi amor, <span class="emoji">💖</span>
+  </div>
+</div>
+</body>
+</html>
